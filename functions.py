@@ -40,12 +40,14 @@ for i in range(0, len(fe)):
         arrB = fe[j][1:]
         for e in arrA:
             # obtener el intervalo de horas
-            print(e[2:])
+            #print('intervalo hora: ', e[2:])
             # obtener el dia
-            print(e[:2])
             for e2 in arrB:
+                # check if the day is the same to proceed with checking if they've been
+                # at the office the same time
                 if e[:2] == e2[:2]:
-                    print('same day')
+                    print('prevWorkedHour st', e[2:4], 'prevWorkedHour lst ', e[8:10],
+                          ' nextWorkerHour ', e2[2:4], 'nextWorkerHour lst ', e2[8:10])
     print(fe[i][:2], '-', fe[j][:1], contador)
     contador = 0
 """"
