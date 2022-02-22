@@ -9,7 +9,7 @@ The data of each employee is divided into arrays, one contains the first worker 
 # Methodology
 
 1. Data cleaning
-2. <br>
+<br>
 Once the file has been loaded, the unwanted characters and blank spaces are removed and added to an array of lines, each line contains the data of the worker.
 <br>
 3. Looping through the data
