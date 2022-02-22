@@ -8,22 +8,22 @@ The data of each employee is divided into arrays, one contains the first worker 
 
 # Methodology
 
-1. Data cleaning
+## Data cleaning.
 <br>
-Once the file has been loaded, the unwanted characters and blank spaces are removed and added to an array of lines, each line contains the data of the worker.
+  Once the file has been loaded, the unwanted characters and blank spaces are removed and added to an array of lines, each line contains the data of the worker.
 <br>
-3. Looping through the data
+## Looping through the data
 <br>
-After loading the data, each worker's data is compared to the next one in line. So at the end the employee before the last employee only compares it's data to the last one since it has been already compared the ones before it.
+  After loading the data, each worker's data is compared to the next one in line. So at the end the employee before the last employee only compares it's data to the last one       since it has been already compared the ones before it.
 <br>
-5. Finding the matching days
+## Finding the matching days
 <br>
-To find the matching days, only the characters describing the days from Monday to Sunday are selected. When these match, then the time frames are compared.
+  To find the matching days, only the characters describing the days from Monday to Sunday are selected. When these match, then the time frames are compared.
 <br>
-7. Checking the time frames 
+## Checking the time frames 
 <br>
-Here we have 4 variables, the first 2 contain the start and end hour of the first worker and the other 2 the starting and ending hour of the one before.
-So if the startTime1 is less than or equal than the endTime2 and if the startTime2 is less than or equal of the endTime1 then a 1 is added to the counter.
+  Here we have 4 variables, the first 2 contain the start and end hour of the first worker and the other 2 the starting and ending hour of the one before.
+  So if the startTime1 is less than or equal than the endTime2 and if the startTime2 is less than or equal of the endTime1 then a 1 is added to the counter.
 <br>
 # How to run
 
