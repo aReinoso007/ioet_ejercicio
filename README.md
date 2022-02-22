@@ -7,24 +7,24 @@ To complete this task, it's important to first do some cleaning of the data to b
 The data of each employee is divided into arrays, one contains the first worker and its data and the other the next one up. Each worker time frame is compared depending if they have gone into the office the same day, if the days don't match then the next value is compared. When the day and the time frames match up, then a 1 is added to a counter. The counter is for storing how many times those two workers were at the office during the same time frame. 
 
 # Methodology
-
-## Data cleaning.
-<br>
-  Once the file has been loaded, the unwanted characters and blank spaces are removed and added to an array of lines, each line contains the data of the worker.
-<br>
-## Looping through the data
-<br>
+Here I explain  how I tackled down this problem.
+ ## Data cleaning.
+  <br>
+    Once the file has been loaded, the unwanted characters and blank spaces are removed and added to an array of lines, each line contains the data of the worker.
+  <br>
+ ## Looping through the data.
+  <br>
   After loading the data, each worker's data is compared to the next one in line. So at the end the employee before the last employee only compares it's data to the last one       since it has been already compared the ones before it.
-<br>
-## Finding the matching days
-<br>
-  To find the matching days, only the characters describing the days from Monday to Sunday are selected. When these match, then the time frames are compared.
-<br>
-## Checking the time frames 
-<br>
-  Here we have 4 variables, the first 2 contain the start and end hour of the first worker and the other 2 the starting and ending hour of the one before.
-  So if the startTime1 is less than or equal than the endTime2 and if the startTime2 is less than or equal of the endTime1 then a 1 is added to the counter.
-<br>
+  <br>
+  ## Finding the matching days
+  <br>
+    To find the matching days, only the characters describing the days from Monday to Sunday are selected. When these match, then the time frames are compared.
+  <br>
+  ## Checking the time frames 
+  <br>
+    Here we have 4 variables, the first 2 contain the start and end hour of the first worker and the other 2 the starting and ending hour of the one before.
+    So if the startTime1 is less than or equal than the endTime2 and if the startTime2 is less than or equal of the endTime1 then a 1 is added to the counter.
+  <br>
 # How to run
 
 In order to run this code, Python must be installed. 
