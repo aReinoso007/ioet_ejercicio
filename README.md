@@ -1,11 +1,28 @@
 # Overview
 
+To complete this task, it's important to first do some cleaning of the data to be processed. Then, check the days that the workers have gone into the office and select those that are the same. Once the day has been chosen, the time intervals are compared to see whether or not they are within the same time frame.
+
 # Explanation
+
+The data of each employee is divided into arrays, one contains the first worker and its data and the other the next one up. Each worker time frame is compared depending if they have gone into the office the same day, if the days don't match then the next value is compared. When the day and the time frames match up, then a 1 is added to a counter. The counter is for storing how many times those two workers were during the same time frame. 
 
 # Methodology
 
+1. Data cleaning
+2. Looping through the data
+3. Finding the matching days
+4. Checking the time frames 
+
 # How to run
 
+In order to run this code, Python must be installed. 
+```
+python main.py "sample.txt"
+```
+or
+```
+python main.py "filename"
+```
 # Problem
 The company ACME offers their employees the flexibility to work the hours they want. But due to some external circumstances they need to know what employees have been at the office within the same time frame
 
