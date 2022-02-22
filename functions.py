@@ -11,10 +11,13 @@ def readFile(path):
         ln = l.replace("=", ",")
         ln = ln.replace(" ", "")
         ln = ln.strip()
-        # here is to split all the values separated by commas
         ln = ln.split(',')[0:]
         nl.append(ln)
     return nl
+
+
+def calculateOverlappingHours(list):
+    pass
 
 
 def dataToDictionary(lst):
@@ -35,10 +38,9 @@ for i in range(0, len(fe)):
         for e in arrA:
             for e2 in arrB:
                 if (e[:2] == e2[:2]):
-                    x = range(int(e[2:4]), int(e[8:10]))
-                    y = range(int(e2[2:4]), int(e2[8:10]))
-                    xs = set(x)
-                    if xs.intersection(y):
+                    start1, end1, start2, end2 = int(e[2:4]), int(
+                        e[8:10]), int(e2[2:4]), int(e2[8:10])
+                    if (start1 <= end2) & (start2 <= end1):
                         contador += 1
         if contador > 0:
             print(fe[i][:1], '-', fe[j][:1], contador)
@@ -48,4 +50,6 @@ for i in range(0, len(fe)):
 ASTRID-RENE: 2
 *ASTRID-ANDRES: 3
 *RENE-ANDRES: 2
+
+RENE-ASTRID: 3
 """""
