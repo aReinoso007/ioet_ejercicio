@@ -16,12 +16,17 @@ Then the matching days need to be find. To find the matching days, only the char
 # How to run
 
 In order to run this code, Python must be installed. 
+So, to run the main script, type the following in the terminal:
 ```
 python main.py "sample.txt"
 ```
-or
+or the name of whatever file you may want to 
 ```
 python main.py "filename"
+```
+To run the unittests, type the following in the terminal:
+```
+python test_worker_function.py
 ```
 # Problem
 
