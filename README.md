@@ -1,3 +1,30 @@
+# Overview
+
+To complete this task, it's important to first do some cleaning of the data to be processed. Then, check the days that the workers have gone into the office and select those that are the same. Once the day has been chosen, the time intervals are compared to see whether or not they are within the same time frame.
+
+# Explanation
+
+The data of each employee is divided into arrays, one contains the first worker and its data and the other the next one up. Each worker time frame is compared depending if they have gone into the office the same day, if the days don't match then the next value is compared. When the day and the time frames match up, then a 1 is added to a counter. The counter is for storing how many times those two workers were at the office during the same time frame. 
+
+# Methodology
+
+Here I explain  how I tackled down this problem.
+Once the file has been loaded, the unwanted characters and blank spaces are removed and added to an array of lines, each line contains the data of the worker.
+After loading the data, each worker's data is compared to the next one in line. So at the end the employee before the last employee only compares it's data to the last one       since it has been already compared the ones before it. 
+Then the matching days need to be find. To find the matching days, only the characters describing the days from Monday to Sunday are selected. When these match, then the time frames are compared. After checking the matching days. 4 variables are declared, the first 2 contain the start and end hour of the first worker and the other 2 the starting and ending hour of the one before. So if the startTime1 is less than or equal than the endTime2 and if the startTime2 is less than or equal of the endTime1 then a 1 is added to the counter.
+  
+# How to run
+
+In order to run this code, Python must be installed. 
+```
+python main.py "sample.txt"
+```
+or
+```
+python main.py "filename"
+```
+# Problem
+
 The company ACME offers their employees the flexibility to work the hours they want. But due to some external circumstances they need to know what employees have been at the office within the same time frame
 
 The goal of this exercise is to output a table containing pairs of employees and how often they have coincided in the office.
@@ -25,12 +52,3 @@ ASTRID=MO10:00-12:00,TH12:00-14:00,SU20:00-21:00
 OUTPUT:
 RENE-ASTRID: 3
 
-Once you have finished the exercise, please upload the solution to GitHub and send us the link. Don’t forget to include a README.md file. Your README should include an overview of your solution, an explanation of your architecture, an explanation of your approach and methodology and instructions how to run the program locally.
-
-We evaluate many aspects, including how well your code is structured, applied pattern designs, testing and the quality of your solution.
-
-The solution shouldn’t need any UI, a console application is good enough.
-
-When submitting your exercise, be sure to avoid including compiled files as this could be considered malware. Please include the proper instructions to compile your project in the README file
-
-This exercise should be completed within a week. If for some reason you are unable to finish on time, please let us know.
