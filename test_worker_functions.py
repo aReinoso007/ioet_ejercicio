@@ -10,7 +10,6 @@ class TestReadFile(unittest.TestCase):
         )
 
     def test_read_file(self):
-        fileInput = []
         fileInput = worker("sample.txt").readFile()
         for f in fileInput:
             containsEqual = sum(1 for fileInput in f if '=' in fileInput)
