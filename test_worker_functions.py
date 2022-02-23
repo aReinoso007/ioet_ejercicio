@@ -22,13 +22,14 @@ class TestReadFile(unittest.TestCase):
             self.assertTrue
 
     def test_run_process(self):
-        overlaps = worker("sample.txt").runProcess()
+        result = worker("sample.txt").runProcess()
         expectedResult1 = {"(['RENE'], '-', ['ASTRID'])": 2,
                            "(['RENE'], '-', ['ANDRES'])": 2,
                            "(['ASTRID'], '-', ['ANDRES'])": 3}
 
         expectedResult2 = {"(['RENE'], '-', ['ASTRID'])": 3}
-        if (overlaps == expectedResult1) | (overlaps == expectedResult2):
+
+        if (result == expectedResult1) | (result == expectedResult2):
             self.assertTrue
         else:
             self.assertFalse
