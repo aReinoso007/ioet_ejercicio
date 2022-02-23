@@ -10,8 +10,7 @@ class WorkerFunctions():
         with open(self.file, encoding='utf8') as f:
             lines = f.readlines()
         for l in lines:
-            ln = l.replace("=", ",")
-            ln = ln.replace(" ", "")
+            ln = l.replace("=", ",").replace(" ", "")
             ln = ln.strip()
             ln = ln.split(',')[0:]
             newLine.append(ln)
@@ -31,7 +30,9 @@ class WorkerFunctions():
                             if (start1 <= end2) & (start2 <= end1):
                                 counter += 1
                 if counter > 0:
-                    result[str((list[i][:1], '-', list[j][:1]))] = counter
+                    key = "" + str(list[i][:1]) + "-" + str(list[j][:1])
+                    key = key.replace('[', '').replace(']', '')
+                    result[key] = counter
                 counter = 0
         return result
 

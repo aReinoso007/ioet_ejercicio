@@ -23,11 +23,11 @@ class TestReadFile(unittest.TestCase):
 
     def test_run_process(self):
         result = worker("sample.txt").runProcess()
-        expectedResult1 = {"(['RENE'], '-', ['ASTRID'])": 2,
-                           "(['RENE'], '-', ['ANDRES'])": 2,
-                           "(['ASTRID'], '-', ['ANDRES'])": 3}
+        expectedResult1 = {"'RENE'-'ASTRID'": 2,
+                           "'RENE'-'ANDRES'": 2,
+                           "'ASTRID'-'ANDRES'": 3}
 
-        expectedResult2 = {"(['RENE'], '-', ['ASTRID'])": 3}
+        expectedResult2 = {"'RENE'-'ASTRID'": 3}
 
         if (result == expectedResult1) | (result == expectedResult2):
             self.assertTrue
