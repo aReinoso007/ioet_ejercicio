@@ -11,7 +11,8 @@ The data of each employee is divided into arrays, one contains the first worker 
 Here I explain  how I tackled down this problem.
 Once the file has been loaded, the unwanted characters and blank spaces are removed and added to an array of lines, each line contains the data of the worker.
 After loading the data, each worker's data is compared to the next one in line. So at the end the employee before the last employee only compares it's data to the last one       since it has been already compared the ones before it. 
-Then the matching days need to be find. To find the matching days, only the characters describing the days from Monday to Sunday are selected. When these match, then the time frames are compared. After checking the matching days. 4 variables are declared, the first 2 contain the start and end hour of the first worker and the other 2 the starting and ending hour of the one before. So if the startTime1 is less than or equal than the endTime2 and if the startTime2 is less than or equal of the endTime1 then a 1 is added to the counter.
+Then the matching days need to be founnd. To find the matching days, only the characters describing the days from Monday to Sunday are selected; when there's a match, then the time frames are compared. 
+To check the time frames, 4 variables are declared, the first 2 contain the start and end hour of the first worker and the other 2 the starting and ending hour of next one. So if the startTime1 is less than or equal than the endTime2 and if the startTime2 is less than or equal of the endTime1 then a 1 is added to the counter.
   
 # How to run
 
