@@ -38,5 +38,6 @@ class WorkerFunctions():
     def runProcess(self):
         fileInput = self.readFile()
         result = self.calculateOverlappingHours(fileInput)
-        for key, val in result.items():
-            print(key, val)
+        return result
+        # for key, val in result.items():
+        #    print(key, val)
